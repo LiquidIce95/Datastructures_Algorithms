@@ -36,7 +36,7 @@ class TNode(Node):
 
         if self.getr() == None:
             self.rh = 0
-        elif root.getr() != None:
+        elif self._r.getr() != None:
             self.rh = max(self._r.lh,self._r.rh)+1
 
     def setl(self, v):
@@ -378,7 +378,7 @@ class Queue:
     def enq(self,v :Node):
         oleft = self.__Left
         self.__Left = v
-        slef.__Left.setr(oleft)
+        self.__Left.setr(oleft)
 
         
         self.__Mid = self.__Mid.getl()
